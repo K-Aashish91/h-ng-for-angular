@@ -1,0 +1,18 @@
+<h3>Printing all numbers</h3>
+<ul [hidden]="printEvenClicked">
+  <li *ngFor="let n of numbers">
+    <span *ngIf="n%2!==0">
+      {{n}}
+    </span>
+  </li>
+</ul>
+
+<ul [hidden]="!printEvenClicked">
+  <li *ngFor="let n of numbers">
+    <span *ngIf="n%2==0">
+    {{n}}
+  </span>
+  </li>
+</ul>
+
+<button (click)="printEven()" >Even</button>
